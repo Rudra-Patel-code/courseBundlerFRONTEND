@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Button,
@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
-import { contactUs } from "../../redux/actions/otherReduces";
+import { contactUs } from "../../redux/actions/otherActions.js";
 import { useDispatch, useSelector } from "react-redux";
 
 const Contact = () => {
@@ -87,7 +87,7 @@ const Contact = () => {
           </Box>
 
           <Button
-            // isLoading={loading}
+            isLoading={loading}
             my="4"
             colorScheme={"yellow"}
             type="submit"

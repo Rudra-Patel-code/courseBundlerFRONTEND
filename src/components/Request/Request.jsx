@@ -12,7 +12,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import { courseRequest } from "../../redux/actions/otherReduces";
+import { courseRequest } from "../../redux/actions/otherActions";
 
 const Request = () => {
   const [name, setName] = useState("");
@@ -87,7 +87,7 @@ const Request = () => {
           </Box>
 
           <Button
-            // isLoading={loading}
+            isLoading={loading}
             my="4"
             colorScheme={"yellow"}
             type="submit"
